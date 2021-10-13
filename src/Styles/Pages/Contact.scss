@@ -1,0 +1,46 @@
+.contact-container {
+    height: 500px;
+    text-align: center;
+    background-color:#292828;
+    color: $txt-color;
+    .con{
+      padding: 15px;
+    }
+    .form-container {
+      @include grids;
+      padding-bottom: 20px;
+      label {
+        padding: 10px;
+      }
+      .txt-email,
+      .txt-name {
+        @include txt-box1;
+      }
+      .txt-area {
+        @include text-area;
+      }
+      .btn {
+        position: relative;
+        left: 31%;
+      }
+      .btn-sub {
+        @include btn-submit;
+      }
+    }
+  }
+  /*
+  @include mobile-device(mobile){
+    .contact-container{
+      .form-container{
+        @include grids;
+        .txt-email,
+        .txt-name,
+        .txt-area{
+          width: 100%;
+        }
+      }
+    }
+    }
+  */
+  
+  

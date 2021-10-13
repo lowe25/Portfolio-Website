@@ -1,0 +1,13 @@
+footer{
+    min-height: 40px;
+    background-color:#373737;
+}
+.socials-container {
+    @include grid-col;
+    padding: 12px;
+    grid-template-columns: repeat(4, auto);
+    gap: 26px;
+    .social-pic {
+      height: 40px;
+    }
+  }

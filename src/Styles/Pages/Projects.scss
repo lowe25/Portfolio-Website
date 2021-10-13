@@ -1,0 +1,145 @@
+.projects-container {
+    min-height: 500px;
+    padding: 15px 0 30px;
+    background-color: $bg-color2;
+    color: $txt-color;
+    font-family: $Raleway;
+    h1 {
+      text-align: center;
+    }
+    .project-list {
+      min-height: 500px;
+      @include grid-col;
+      align-items: center;
+      gap: 15px;
+      .btn-div {
+        @include grid-col;
+        gap: 15px;
+        padding: 12px;
+      }
+    }
+    .project {
+      min-height: 220px;
+      width: 500px;
+      border: 2px solid white;
+      padding: 15px;
+      .btn-projDemo {
+        @include proj-btn;
+      }
+      .btn-projDemo:hover {
+        background-color: $bg-black;
+        transition-duration: 1s;
+      }
+    }
+    .technologies {
+      @include flex-setting1;
+      .prog {
+        height: 40px;
+      }
+    }
+  }
+  
+  
+  /*
+  @include mobile-device1(mobiles) {
+    .projects-container {
+      .project-list {
+        @include grids;
+        .btn-div {
+          @include grids;
+        }
+      }
+      .project {
+        width: 250px;
+        h1 {
+          padding: 15px;
+        }
+      }
+    }
+  }
+  @include mobile-device(mobile) {
+      .projects-container {
+        .project-list {
+          @include grids;
+          .btn-div {
+            @include grids;
+          }
+        }
+        .project {
+          width: 250px;
+          h1 {
+            padding: 15px;
+          }
+        }
+      }
+    }
+  
+  @include tablet-device(tablet-sm, tablet-md){
+    .projects-container {
+      .project-list {
+        @include grids;
+        .btn-div {
+          @include grids;
+        }
+      }
+      .project {
+        width: 350px;
+        h1 {
+          padding: 15px;
+        }
+      }
+    }
+  }
+  
+  @include small-screens(screen-sm,screen-md){
+    .projects-container {
+      .project-list {
+        @include grids;
+        .btn-div {
+          @include grids;
+        }
+      }
+      .project {
+        width: 350px;
+        h1 {
+          padding: 15px;
+        }
+      }
+    }
+  }
+  
+  @include desktop-screens(screen-lg, screen-xl){
+    .projects-container {
+      .project-list {
+        @include grids;
+        .btn-div {
+          @include grids;
+        }
+      }
+      .project {
+        width: 350px;
+        h1 {
+          padding: 15px;
+        }
+      }
+    }
+  }
+  
+  @include desktop-screens2(desktop-sm, desktop-md){
+    .projects-container {
+      .project-list {
+        @include grids;
+        .btn-div {
+          @include grids;
+        }
+      }
+      .project {
+        width: 450px;
+        h1 {
+          padding: 15px;
+        }
+      }
+    }
+  }
+  
+*/

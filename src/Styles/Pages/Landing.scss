@@ -1,0 +1,28 @@
+.landing {
+  @include height;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: $Monter;
+  .landing-text {
+    height: 600px;
+    .parent {
+      color: $txt-color;
+      display: grid;
+      justify-content: center;
+      position: relative;
+      top: 45%;
+      .landing-desc{
+        background-color: $bg-black;
+      }
+    }
+    .btn-intro{
+      display: grid;
+      justify-content: center;
+      padding: 25px;
+      .btn-cta{
+        @include btn-submit;
+      }
+    }
+  }
+}

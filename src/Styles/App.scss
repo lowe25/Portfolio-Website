@@ -1,2 +1,16 @@
+//Base
+@import './Base/Reset.scss';
+@import './Base/Colors.scss';
+@import './Base/Font.scss';
+@import './Base/Mixins.scss';
+@import './Component/Buttons.scss';
+@import './Component/Textbox.scss';
+//Components
 @import './Layout/Navbar.scss';
 @import './Layout/Footer.scss';
+
+//Pages
+@import './Pages/Landing.scss';
+@import './Pages/About.scss';
+@import './Pages/Projects.scss';
+@import './Pages/Contact.scss';

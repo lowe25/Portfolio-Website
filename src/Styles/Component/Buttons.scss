@@ -1,0 +1,21 @@
+@mixin proj-btn {
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #262323;
+    border: 1px solid $txt-color;
+    color: $txt-color;
+  }
+  
+  @mixin btn-submit {
+    height: 40px;
+    width: 160px;
+    border-radius: 6px;
+    border: 1px solid $txt-color;
+    cursor: pointer;
+    background-color: #222121;
+    color: $txt-color;
+  }
+  
