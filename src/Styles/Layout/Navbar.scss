@@ -14,16 +14,16 @@
     }
     li {
       list-style: none;
-      padding: 1rem;
+      padding: 10px;
       font-weight: bold;
     }
     .links {
       text-decoration: none;
-      color: white;
+      color: $txt-color;
     }
     .links:hover {
-      color: black;
-      border-bottom: 2px solid yellow;
+      border: 2px solid yellow;
+      padding: 5px;
     }
   }
   
@@ -42,6 +42,7 @@
       width: 100%;
       background-color: white;
     }
+
   }
   
   /*Media Query Mobile*/
@@ -53,6 +54,7 @@
     .nav-links {
       display: none;
       width: 100%;
+  
       ul {
         flex-direction: column;
       }
