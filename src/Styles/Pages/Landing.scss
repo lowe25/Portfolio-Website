@@ -14,6 +14,9 @@
       top: 45%;
       .landing-desc{
         background-color: $bg-black;
+        h1{
+          padding: 15px;
+        }
       }
     }
     .btn-intro{
@@ -22,6 +25,29 @@
       padding: 25px;
       .btn-cta{
         @include btn-submit;
+      }
+    }
+  }
+}
+
+/*Media Queries*/
+@include mobile-device1(mobile){
+  .landing{
+    .landing-text{
+      text-align: center;
+      .landing-desc{
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+@include tablet-device(tablet-sm, tablet-md){
+  .landing{
+    .landing-text{
+      text-align: center;
+      .landing-desc{
+        line-height: 1.5;
       }
     }
   }
