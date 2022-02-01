@@ -7,7 +7,7 @@
   .landing-text {
     height: 600px;
     .parent {
-      color: $txt-color;
+      color: $font-color;
       display: grid;
       justify-content: center;
       position: relative;
@@ -31,24 +31,3 @@
 }
 
 /*Media Queries*/
-@include mobile-device1(mobile){
-  .landing{
-    .landing-text{
-      text-align: center;
-      .landing-desc{
-        line-height: 1.5;
-      }
-    }
-  }
-}
-
-@include tablet-device(tablet-sm, tablet-md){
-  .landing{
-    .landing-text{
-      text-align: center;
-      .landing-desc{
-        line-height: 1.5;
-      }
-    }
-  }
-}

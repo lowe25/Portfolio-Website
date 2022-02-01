@@ -1,87 +1,99 @@
 .about-container {
-    @include height;
-    background-color: $bg-color1;
-    font-family: $Raleway;
-    color: $txt-color;
-  
-    @include img-setting;
-    .about {
-      min-height: 400px;
-      @include flex-setting1;
-      .prof-img {
-        height: 300px;
-        border-radius: 150px;
-        padding-left: 18px;
+  @include height;
+  background-color: $bg-color1;
+  font-family: $Raleway;
+  color: $font-color;
+
+  @include img-setting;
+  .about {
+    min-height: 400px;
+    @include flex-setting1;
+    .prof-img {
+      height: 300px;
+      border-radius: 150px;
+      padding-left: 18px;
+    }
+    .desc {
+      color: $font-color;
+      padding: 10px;
+      line-height: 1.8;
+      width: 600px;
+    }
+  }
+  .skills-container {
+    .languages {
+      @include grid-col;
+      gap: 25px;
+    }
+    .prog {
+      height: 150px;
+    }
+    .skills {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .credits {
+      display: grid;
+      justify-content: center;
+      padding: 30px;
+      .link {
+        text-decoration: none;
+        color: $font-color;
       }
-      .desc {
-        color: $txt-color;
-        padding: 10px;
-        line-height: 1.8;
-        width: 600px;
+    }
+  }
+}
+
+/*Media Queries*/
+/*Mobile 480*/
+@include mobile-device(mobile-md) {
+  .about-container {
+    .about {
+      @include flex-setting2;
+      .prof-img {
+        padding: 20px;
+      }
+      .desc{
+        text-align: center;
+        width: auto;
+       p{
+         padding:10px;
+       }
       }
     }
     .skills-container {
       .languages {
-        @include grid-col;
-        gap: 25px;
+        display: none;
+        @include grids;
       }
-      .prog {
-        height: 150px;
+    }
+  }
+}
+
+/*Mobile 481 - 768*/
+@include mobile-device-lg(mobile-lg, tablet-sm){
+  .about-container {
+    .about {
+      @include flex-setting2;
+      .prof-img {
+        padding: 20px;
       }
-      .skills {
+      .desc{
         text-align: center;
-        padding-bottom: 20px;
+        width: auto;
+       p{
+         padding:10px;
+       }
       }
-      .credits {
-        display: grid;
-        justify-content: center;
-        padding: 30px;
-        .link {
-          text-decoration: none;
-          color: $txt-color;
-        }
+    }
+    .skills-container {
+      .languages {
+        display: none;
+        @include grids;
       }
     }
   }
-  
-  /*Media Queries*/
-  @include mobile-device(mobile) {
-    .about-container {
-      .about {
-        @include flex-setting2;
-        .prof-img {
-          padding: 20px;
-        }
-        .desc{
-          text-align: center;
-          width: auto;
-        }
-      }
-      .skills-container {
-        .languages {
-          @include grids;
-        }
-      }
-    }
-  }
-  
-  @include tablet-device(tablet-sm,tablet-md){
-    .about-container {
-      .about {
-        @include flex-setting2;
-        .prof-img {
-          padding: 20px;
-        }
-        .desc{
-          text-align: center;
-          width: auto;
-        }
-      }
-      .skills-container {
-        .languages {
-          @include grids;
-        }
-      }
-    }
-  }
-  
+}
+
+
+

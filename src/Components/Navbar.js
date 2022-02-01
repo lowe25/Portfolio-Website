@@ -1,46 +1,36 @@
-const Navbar = () => {
-  const toggleBtn = () => {
-    const toggleButton = document.getElementsByClassName("toggle")[0];
-    const navbarLinks = document.getElementsByClassName("nav-links")[0];
-     toggleButton.addEventListener("click", () => {
-      navbarLinks.classList.toggle("active");
-    });
-  };
+import React, { useState } from "react";
+function Navbar() {
+  const [isMobile, setIsMobile] = useState(false);
   return (
     <div>
       <nav className="navbar">
-        <a href="#" className="company-name"></a>
-        <a href="#" className="toggle" onClick={toggleBtn}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </a>
-        <div className="nav-links">
-          <ul>
-            <li>
-              <a href="#" className="links">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="links">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#projects" className="links">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="links">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul
+          className={isMobile ? "nav-menu-mobile" : "nav-menu"}
+          onClick={() => setIsMobile(false)}
+        >
+          <a href="#home" className="nav-links">
+            <li>Home</li>
+          </a>
+          <a href="#about" className="nav-links">
+            <li>About</li>
+          </a>
+          <a href="#projects" className="nav-links">
+            <li>Projects</li>
+          </a>
+          <a href="#contact" className="nav-links">
+            <li>Contact</li>
+          </a>
+        </ul>
+        <button className="burger-menu" onClick={() => setIsMobile(!isMobile)}>
+          {isMobile ? (
+            <i className="fas fa-times"></i>
+          ) : (
+            <i className="fas fa-bars"></i>
+          )}
+        </button>
       </nav>
     </div>
   );
-};
+}
+
 export default Navbar;

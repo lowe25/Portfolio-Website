@@ -7,7 +7,9 @@ footer{
     padding: 12px;
     grid-template-columns: repeat(4, auto);
     gap: 26px;
-    .social-pic {
-      height: 40px;
+    color: $font-color;
+    p{
+      position: relative;
+      left: 16%;
     }
   }

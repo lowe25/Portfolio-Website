@@ -1,144 +1,125 @@
 .projects-container {
-    min-height: 500px;
-    padding: 15px 0 30px;
-    background-color: $bg-color2;
-    color: $txt-color;
-    font-family: $Raleway;
+  min-height: 80vh;
+  display: grid;
+  align-items: stretch;
+  padding: 15px 0 300px;
+  background-color: $bg-color2;
+  color: $font-color;
+  font-family: $Raleway;
+  .proj {
+    text-align: center;
+  
+  }
+  .project-list {
+    @include grid-col-2;
+    gap: 15px;
+    align-items: center;
+    .btn-div {
+      @include grid-col;
+      gap: 15px;
+      padding: 12px;
+    }
+  }
+  //Box
+  .project {
+    min-height: 220px;
+    width: 500px;
+    border: 2px solid white;
+    padding: 15px;
+   
     h1 {
       text-align: center;
     }
+    .btn-projDemo {
+      @include proj-btn;
+    }
+    .btn-projDemo:hover {
+      background-color: $bg-black;
+      transition-duration: 1s;
+    }
+  }
+  .technologies {
+    @include flex-setting1;
+    .prog {
+      height: 40px;
+    }
+  }
+}
+
+/*Media Queries*/
+/*Mobile 0 - 480 */
+@include mobile-device(mobile-md) {
+  .projects-container {
+    .proj {
+      text-align: center;
+      padding-bottom: 60px;
+    }
     .project-list {
-      min-height: 500px;
-      @include grid-col;
-      align-items: center;
-      gap: 15px;
+      @include grids;
       .btn-div {
-        @include grid-col;
-        gap: 15px;
-        padding: 12px;
+        @include grids;
       }
     }
     .project {
-      min-height: 220px;
+      width: 250px;
+      h1 {
+        padding: 15px;
+      }
+    }
+  }
+}
+
+/*Mobile 481 - 768*/
+@include mobile-device-lg(mobile-lg, tablet-sm) {
+  .projects-container {
+    .project-list {
+      @include grids;
+      .btn-div {
+        @include grids;
+      }
+    }
+    .project {
+      width: 370px;
+      h1 {
+        padding: 15px;
+      }
+    }
+  }
+}
+
+/*Tablet 768 - 1024*/
+@include tablet-device(tablet-sm, tablet-md) {
+  .projects-container {
+
+    .project-list {
+      @include grids;
+      .btn-div {
+        @include grids;
+      }
+    }
+    .project {
       width: 500px;
-      border: 2px solid white;
-      padding: 15px;
-      .btn-projDemo {
-        @include proj-btn;
-      }
-      .btn-projDemo:hover {
-        background-color: $bg-black;
-        transition-duration: 1s;
-      }
-    }
-    .technologies {
-      @include flex-setting1;
-      .prog {
-        height: 40px;
+      h1 {
+        padding: 15px;
       }
     }
   }
-  
-  
-  /*Media Queries*/
-  @include mobile-device1(mobiles) {
-    .projects-container {
-      .project-list {
+}
+
+@include screen-md(tablet-lg,tablet-lg1){
+  .projects-container {
+
+    .project-list {
+      @include grids;
+      .btn-div {
         @include grids;
-        .btn-div {
-          @include grids;
-        }
       }
-      .project {
-        width: 250px;
-        h1 {
-          padding: 15px;
-        }
+    }
+    .project {
+      width: 600px;
+      h1 {
+        padding: 15px;
       }
     }
   }
-  @include mobile-device(mobile) {
-      .projects-container {
-        .project-list {
-          @include grids;
-          .btn-div {
-            @include grids;
-          }
-        }
-        .project {
-          width: 250px;
-          h1 {
-            padding: 15px;
-          }
-        }
-      }
-    }
-  
-  @include tablet-device(tablet-sm, tablet-md){
-    .projects-container {
-      .project-list {
-        @include grids;
-        .btn-div {
-          @include grids;
-        }
-      }
-      .project {
-        width: 350px;
-        h1 {
-          padding: 15px;
-        }
-      }
-    }
-  }
-  
-  @include small-screens(screen-sm,screen-md){
-    .projects-container {
-      .project-list {
-        @include grids;
-        .btn-div {
-          @include grids;
-        }
-      }
-      .project {
-        width: 350px;
-        h1 {
-          padding: 15px;
-        }
-      }
-    }
-  }
-  
-  @include desktop-screens(screen-lg, screen-xl){
-    .projects-container {
-      .project-list {
-        @include grids;
-        .btn-div {
-          @include grids;
-        }
-      }
-      .project {
-        width: 350px;
-        h1 {
-          padding: 15px;
-        }
-      }
-    }
-  }
-  
-  @include desktop-screens2(desktop-sm, desktop-md){
-    .projects-container {
-      .project-list {
-        @include grids;
-        .btn-div {
-          @include grids;
-        }
-      }
-      .project {
-        width: 450px;
-        h1 {
-          padding: 15px;
-        }
-      }
-    }
-  }
-  
+}

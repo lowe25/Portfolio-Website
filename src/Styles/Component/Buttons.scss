@@ -5,17 +5,17 @@
     border: none;
     border-radius: 6px;
     background-color: #262323;
-    border: 1px solid $txt-color;
-    color: $txt-color;
+    border: 1px solid $font-color;;
+    color: $font-color;
   }
   
   @mixin btn-submit {
     height: 40px;
     width: 160px;
     border-radius: 6px;
-    border: 1px solid $txt-color;
+    border: 1px solid $font-color;;
     cursor: pointer;
     background-color: #222121;
-    color: $txt-color;
+    color: $font-color;
   }
   

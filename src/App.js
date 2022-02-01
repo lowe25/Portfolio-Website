@@ -1,18 +1,20 @@
+//Style
 import "./Styles/App.scss";
-import Landing from "./Pages/Landing";
-import About from "./Pages/About";
-import Project from "./Pages/Projects";
-import Contact from "./Pages/Contact";
+
+//Components
+import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+
+//Pages
+import Landing from "./Pages/Landing";
+
 function App() {
   return (
     <div>
       <div className="App">
-        <Landing />
-        <About />
-        <Project />
-        <Contact />
-        <Footer />
+      <Navbar />
+      <Landing />
+      <Footer />
       </div>
     </div>
   );
