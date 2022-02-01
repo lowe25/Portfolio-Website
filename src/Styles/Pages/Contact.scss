@@ -52,7 +52,14 @@ height: 100vh;
     .btn-sub {
       height: 35px;
       width: 160px;
+      background-color: $bg-color1;
       cursor: pointer;
+      border:1px solid $font-color;
+      color:white;
+    }
+    .btn-sub:hover{
+      background-color: $bg-black;
+      transition-duration: 1s;
     }
   }
 }
@@ -63,9 +70,14 @@ height: 100vh;
     text-align: center;
     padding: 10px;
   }
+
   .soc-links {
     display: flex;
     gap: 25px;
+    .social-links{
+      text-decoration: none;
+      color:white;
+    }
   }
 }
 /*Media Queries*/

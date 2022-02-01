@@ -1,3 +1,4 @@
+import Navbar from "../Components/Navbar";
 const Landing = () => {
   return (
     <>
@@ -5,6 +6,7 @@ const Landing = () => {
         className="landing"
         style={{ backgroundImage: "url(/img/landing-img.jpg)" }}
       >
+        <Navbar />
         <section className="landing-text">
           <div className="parent">
             <div className="landing-desc">
@@ -339,13 +341,28 @@ const Landing = () => {
           <p>Social Links</p>
           <div className="soc-links">
             <p>
+              <a href="https://www.instagram.com/bamkamcabral/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-links">
               <i class="fab fa-instagram fa-3x"></i>
+              </a>
             </p>
             <p>
-              <i class="fab fa-linkedin fa-3x"></i>
+            <a href="https://www.linkedin.com/in/louie-aldrin-cabral/"
+            target="_blank"
+            rel="noreferrer"
+            className="social-links">
+            <i class="fab fa-linkedin fa-3x"></i>
+            </a>
             </p>
             <p>
-              <i class="fab fa-github fa-3x"></i>
+             <a href="https://github.com/lowe25"
+             target="_blank"
+            rel="noreferrer"
+            className="social-links">
+             <i class="fab fa-github fa-3x"></i>
+             </a>
             </p>
           </div>
         </div>
