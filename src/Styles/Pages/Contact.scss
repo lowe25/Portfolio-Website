@@ -1,195 +1,156 @@
 .contact-container {
-height: 100vh;
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
   background-color: $bg-color1;
   color: $font-color;
-  .contact {
-    position: relative;
-    top: 12%;
-    right: 9%;
-    display: grid;
-    justify-content: center;
-    line-height: 1.6;
+  p {
+    text-align: center;
+    padding: 20px;
   }
 }
-.con {
-  min-height: 600px;
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+.contact-details {
+  display: flex;
   justify-content: center;
-  align-items: center;
   gap: 200px;
-  padding-bottom: 60px;
-
-  .contact-info {
+  .contact {
+    color: $font-color;
     ul {
       li {
         list-style: none;
-        padding: 15px;
-      }
-      i {
-        padding: 12px;
+        padding: 10px;
+        i {
+          margin: 10px;
+        }
       }
     }
   }
+}
 
-  .form-container {
-    height: 200px;
-  .form{
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    gap: 25px;
-  }
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  .contact-form {
+    label {
+      display: block;
+      padding: 10px;
+      text-align: left;
+      position: relative;
+      right: 2%;
+      color: $font-color;
+    }
     .txt-email,
-    .txt-name {
-      height: 32px;
-      width: 100%;
+    .txt-subject,
+    .txt-contact {
+      height: 40px;
+      width: 450px;
     }
     .txt-area {
-      height: 200px;
-      width: 500px;
-      resize: none;
+      height: 150px;
+      width: 450px;
     }
-    .btn-sub {
-      height: 35px;
-      width: 160px;
+    .btn-submit {
+      height: 32px;
+      width: 150px;
+      color: $font-color;
       background-color: $bg-color1;
+      border: 1px solid $font-color;
       cursor: pointer;
-      border:1px solid $font-color;
-      color:white;
-    }
-    .btn-sub:hover{
-      background-color: $bg-black;
-      transition-duration: 1s;
     }
   }
 }
-.social-info {
-  display: grid;
-  justify-content: center;
-  p {
-    text-align: center;
-    padding: 10px;
-  }
 
-  .soc-links {
+.contact-socials {
+  color: $font-color;
+  text-align: center;
+  padding: 40px;
+  .social-media {
     display: flex;
-    gap: 25px;
-    .social-links{
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    .soc-links {
       text-decoration: none;
-      color:white;
+      color: $font-color;
     }
   }
 }
-/*Media Queries*/
-/*Mobile 0 - 480 */
+
+/*Mobile 0 - 480*/
 @include mobile-device(mobile-md) {
-  .contact-container {
-    height: 1000px;
-    display: grid;
-   
-    .contact{
-      top: 0;
-      right: 0;
-      text-align: center;
-      p{
-        width: 200px;
-      }
-    }
+  .contact-details {
+    flex-direction: column;
+    gap:0;
   }
-  .con {
-    grid-template-columns: repeat(1, auto);
-    gap: 0;
-    .contact-info {
-      text-align: center;
-      ul{
-        li{
-          text-align: left;
-          padding:10px;
-        }
-      }
-    }
-    .form-container {
-      padding-bottom: 150px;
-      justify-content: center;
+  .form {
+    padding: 10px;
+
+    flex-direction: column;
+    gap: 30px;
+    .contact-form {
       .txt-email,
-      .txt-area,
-      .txt-name {
+      .txt-contact {
+        width: 100%;
+      }
+      .txt-area {
+        width: 100%;
+      }
+      .btn-submit {
         width: 100%;
       }
     }
   }
 }
 
-/*Mobile 481 - 767*/
+/*Mobile 481 - 768*/
 @include mobile-device-lg(mobile-lg, tablet-sm){
-  .contact-container {
-    min-height: 1000px;
-    display: grid;
-    .contact{
-      top: 0;
-      right: 0;
-      text-align: center;
-      p{
-        width: 200px;
-      }
-    }
+  .contact-details {
+    flex-direction: column;
+    gap:0;
   }
-  .con {
-    grid-template-columns: repeat(1, auto);
-    gap: 0;
-    .contact-info {
-      text-align: center;
-      ul{
-        li{
-          text-align: left;
-          padding:10px;
-        }
-      }
-    }
-    .form-container {
-      padding-bottom: 150px;
-      justify-content: center;
+  .form {
+    padding: 10px;
+
+    flex-direction: column;
+    gap: 30px;
+    .contact-form {
       .txt-email,
-      .txt-area,
-      .txt-name {
+      .txt-contact {
+        width: 100%;
+      }
+      .txt-area {
+        width: 100%;
+      }
+      .btn-submit {
         width: 100%;
       }
     }
   }
 }
 
-/*Tablet  768 - 1024*/
+/*Tablet 768 - 1024*/
 @include tablet-device(tablet-sm, tablet-md){
-  .contact-container {
-    min-height: 1000px;
-    display: grid;
-    .contact{
-      top: 0;
-      right: 0;
-      text-align: center;
-      p{
- 
-      }
-    }
+  .contact-details {
+    flex-direction: column;
+    gap:0;
   }
-  .con {
-    grid-template-columns: repeat(1, auto);
-    gap: 0;
-    .contact-info {
-      text-align: center;
-      ul{
-        li{
-          text-align: left;
-          padding:10px;
-        }
+  .form {
+    padding: 10px;
+    flex-direction: column;
+    gap: 30px;
+    .contact-form {
+      label{
+        padding:20px;
       }
-    }
-    .form-container {
-      padding-bottom: 150px;
-      justify-content: center;
       .txt-email,
-      .txt-area,
-      .txt-name {
+      .txt-contact {
+        width: 100%;
+      }
+      .txt-area {
+        width: 100%;
+      }
+      .btn-submit {
         width: 100%;
       }
     }

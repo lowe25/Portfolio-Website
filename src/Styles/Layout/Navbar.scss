@@ -36,13 +36,6 @@
 
 /*Media Queries*/
 @include mobile-device(mobile-md){
-  .logo{
-    display: flex;
-    position: absolute;
-    top: 18px;
-    left: 20px;
-    font-size: 16px;
-  }
   .nav-menu{
     display: none;
   }
@@ -62,10 +55,8 @@
     top: 14px;
     right: 25px;
     font-size: 30px;
-    color: $blk-color;
     border: none;
     outline: none;
-    
   }
   .nav-links{
     text-align: center;
