@@ -1,5 +1,5 @@
 import emailjs from "emailjs-com";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 function Contacts() {
   const [modal, setModal] = useState(false);
   const toggleModal = () => {
