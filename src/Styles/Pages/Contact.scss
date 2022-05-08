@@ -88,6 +88,13 @@
   justify-content: center;
   gap: 30px;
   .contact-form {
+    //React Hook form <p>
+    .form-error{
+      color: red;
+      padding-left: 3px;
+      display: flex;
+      align-items: flex-end;
+    }
     label {
       display: block;
       padding: 10px;

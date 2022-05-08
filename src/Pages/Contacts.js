@@ -1,29 +1,36 @@
+//React Hooks Form
+import {useForm} from "react-hook-form";
 import emailjs from "emailjs-com";
-import { useState } from "react";
+import { useState,useRef } from "react";
 function Contacts() {
+  const form = useRef();
+  //React Hook Form
+  const { register, handleSubmit, formState: {errors}} = useForm({
+    mode: "onChange"
+  });
+
   const [modal, setModal] = useState(false);
-  const toggleModal = () => {
-    setModal(!modal);
+  const [pop, setPop] = useState();
+  const toggleModal = (e) => {
+    if(pop === "OK"){
+      return setModal(!modal);
+    }
   };
-  function sendEmail(e) {
-    e.preventDefault();
+  
+  function onSubmit() {
     emailjs
-      .sendForm(
-        "service_qcftgxw",
-        "template_7afjnwg",
-        e.target,
-        "RYE28SXdF61Szx4Ni"
+      .sendForm("service_qcftgxw","template_7afjnwg", form.current,"RYE28SXdF61Szx4Ni"
       )
-      .then(
-        (result) => {
+      .then((result) => {
           console.log(result.text);
+          setPop(result.text);
         },
         (error) => {
           console.log(error.text);
         }
       );
-    e.target.reset();
   }
+
   return (
     <div className="contact-container">
       <p>
@@ -58,37 +65,46 @@ function Contacts() {
           </ul>
         </div>
         <div className="form">
-          <form onSubmit={sendEmail} className="contact-form">
-            <label>Email</label>
+          <form ref={form} className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
+              ref={register}
+              {...register("email", {required: true})}
               placeholder="Email"
               className="txt-email"
               name="email"
             />
+            <p className="form-error">{errors.email && "This Field Is Required"}</p>
 
-            <label>Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
+              {...register("name", {required: true})}
               placeholder="Name"
               className="txt-email"
               name="name"
             />
+            <p className="form-error">{errors.name && "This Field Is Required"}</p>
 
-            <label>Subject</label>
+            <label htmlFor="subject">Subject</label>
             <input
               type="text"
+              {...register("subject", {required: true})}
               placeholder="Subject"
               className="txt-email"
               name="subject"
             />
+           <p className="form-error">{errors.subject && "This Field Is Required"}</p>
 
-            <label>Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
               placeholder="Enter Message"
+              {...register("message", {required:true})}
               className="txt-area"
               name="message"
             ></textarea>
+            <p className="form-error">{errors.message && "This Field Is Required"}</p>
             <label></label>
             <input
               type="submit"
