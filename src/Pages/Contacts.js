@@ -34,10 +34,9 @@ function Contacts() {
   return (
     <div className="contact-container">
       <p>
-        Get in touch with me by filling up the form below or contacting me in my
-        socials
+        Get in touch with me with my details below
       </p>
-      {modal && (
+     {/* {modal && (
         <div className="modal">
           <div
           onClick={toggleModal} 
@@ -48,10 +47,10 @@ function Contacts() {
           onClick={toggleModal}>X</button>
           </div>
         </div>
-      )}
+      )} */}
       <div className="contact-details">
         <div className="contact">
-          <ul>
+          <ul className="contact-list">
             <li>
               <i className="fas fa-map-pin fa-2x"></i>Cavite, Bacoor
             </li>
@@ -64,7 +63,7 @@ function Contacts() {
             </li>
           </ul>
         </div>
-        <div className="form">
+       {/* <div className="form">
           <form ref={form} className="contact-form" onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="email">Email</label>
             <input
@@ -113,7 +112,7 @@ function Contacts() {
               onClick={toggleModal}
             />
           </form>
-        </div>
+        </div> */}
       </div>
       <div className="contact-socials">
         <h1>My Socials</h1>
