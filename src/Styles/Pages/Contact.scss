@@ -1,7 +1,7 @@
 .contact-container {
+  padding: 10px;
   display: grid;
   align-items: center;
-  min-height: 100vh;
   background-color: $bg-color1;
   color: $font-color;
   p {
@@ -33,6 +33,7 @@
 .overlay {
     background: rgba(49,49,49,0.8);
 }
+
 .modal-content {
     position: absolute;
     top: 40%;
@@ -73,6 +74,8 @@
     color: $font-color;
     ul {
       li {
+        display: flex;
+        align-items: center;
         list-style: none;
         padding: 10px;
         i {
@@ -80,6 +83,14 @@
         }
       }
     }
+  }
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  @include mobile-device(mobile-md) {
+    flex-direction: column;
   }
 }
 
